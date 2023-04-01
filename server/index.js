@@ -9,6 +9,8 @@ import clientRoutes from "./routes/client.js";
 import generalRoutes from "./routes/general.js";
 import managementRoutes from "./routes/management.js";
 import salesRoutes from "./routes/sales.js";
+import User from "./models/User.js";
+import { dataUser } from "./data/index.js";
 
 // Configuration
 dotenv.config();
@@ -37,4 +39,4 @@ mongoose
   .then(() => {
     app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
   })
-  .catch((error) => consolelog(`${error} did not connect`));
+  .catch((error) => console.log(`${error} did not connect`));
